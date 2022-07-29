@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  font-family: sans-serif;
+  color: #000000;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.ibg {
+  position: relative;
+}
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+.header__container {
+  display: flex;
+  padding-top: 57px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 615px) {
+  .header__container {
+    flex-direction: column;
+    padding-top: 35px;
+  }
+}
+.header__logo {
+  margin-right: 69px;
+}
+@media (max-width: 615px) {
+  .header__logo {
+    margin-right: 0px;
+    padding: 10px 0px;
+  }
+}
+.header__menu {
+  flex: 1 1 auto;
+}
+@media (max-width: 615px) {
+  .header__menu {
+    padding: 10px 0px;
+  }
+}
+.header__phone {
+  text-align: right;
+  font-family: "Anton";
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.3s ease-out 0s;
+}
+.header__phone:hover {
+  color: #B1642A;
+}
+
+.menu__list {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 479px) {
+  .menu__list {
+    gap: 20px;
+    padding: 0 5px;
+  }
+}
+.menu__link {
+  font-family: "Anton";
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.3s ease-out 0s;
+}
+.menu__link:hover {
+  color: #B1642A;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+.main-block {
+  position: relative;
+}
+.main-block__body {
+  position: relative;
+  z-index: 2;
+  padding: 215px 0px 320px 0px;
+}
+.main-block__title {
+  font-family: "Anton";
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 580px) {
+  .main-block__title {
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .main-block__title {
+    font-size: 23px;
+    line-height: 40px;
+  }
+}
+.main-block__text {
+  font-family: "Anton";
+  font-size: 100px;
+  line-height: 151px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 580px) {
+  .main-block__text {
+    font-size: 80px;
+    line-height: 135px;
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .main-block__text {
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .main-block__buttons {
+    padding-top: 25px;
+  }
+}
+.main-block__button {
+  width: 238px;
+  height: 57px;
+  border: 1px solid #FFFFFF;
+  font-family: "Anton";
+  font-size: 17px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 18px 23px;
+  transition: all 0.3s ease-out 0s;
+}
+.main-block__button:hover {
+  box-shadow: 5px 5px 30px #B1642A;
+  border: 1px solid #B1642A;
+  color: #f16026;
+}
+.main-block__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page__event {
+  padding: 115px 0px 37px 0px;
+}
+@media (max-width: 767.98px) {
+  .page__event {
+    padding: 60px 0px 20px 0px;
+  }
+}
+.top-page {
+  margin-bottom: 20px;
+}
+@media (min-width: 767.98px) {
+  .top-page__row {
+    display: flex;
+    margin: 0px -18px;
+    margin-bottom: 67px;
+  }
+}
+.top-page__title {
+  font-family: "Anton";
+  font-size: 50px;
+  line-height: 75px;
+  text-transform: uppercase;
+  margin-bottom: 58px;
+}
+@media (max-width: 767.98px) {
+  .top-page__title {
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 479px) {
+  .top-page__title {
+    text-align: center;
+  }
+}
+.top-page__column {
+  flex: 0 1 50%;
+  padding: 0px 18px;
+}
+.top-page__subtitle {
+  font-family: "Anton";
+  font-size: 25px;
+  line-height: 38px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (max-width: 479px) {
+  .top-page__subtitle {
+    text-align: center;
+  }
+}
+.top-page__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: justify;
+}
+@media (max-width: 767.98px) {
+  .top-page__text {
+    margin-bottom: 30px;
+  }
+}
+
+.bottom-page__row {
+  display: flex;
+  margin: 0px -13px;
+}
+@media (max-width: 767.98px) {
+  .bottom-page__row {
+    flex-wrap: wrap;
+    margin: 0px 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bottom-page__column {
+  padding: 0px 13px;
+}
+@media (max-width: 767.98px) {
+  .bottom-page__column {
+    flex: 1 1 50%;
+    padding: 15px;
+  }
+}
+@media (max-width: 479.98px) {
+  .bottom-page__column {
+    flex: 1 1 100%;
+  }
+}
+.bottom-page__pict {
+  max-width: 100%;
+}
+
+.footer {
+  padding: 40px 0px;
+  background-color: #FAFAFA;
+}
+@media (max-width: 550px) {
+  .footer {
+    padding: 25px 0px;
+  }
+}
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+@media (max-width: 550px) {
+  .footer__text {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__item {
+  font-size: 15px;
+  line-height: 20px;
+}
